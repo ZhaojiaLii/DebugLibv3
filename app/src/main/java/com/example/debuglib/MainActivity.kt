@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
 //        return if (run == null){
 //            super.onTouchEvent(event)
 //        }
+
 //        else{
 //            run
 //        }
