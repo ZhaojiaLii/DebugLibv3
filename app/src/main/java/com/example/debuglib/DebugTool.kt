@@ -1,11 +1,9 @@
-package com.example.mydebuglib
+package com.example.debuglib
 
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.Context
-import android.content.Intent
-import android.net.Uri
 import android.os.Build
 import android.os.Handler
 import android.os.StrictMode
@@ -14,13 +12,15 @@ import android.util.Log
 import android.view.*
 import android.widget.ListView
 import android.widget.Toast
-import java.io.File
-import java.io.IOException
 import kotlin.collections.ArrayList
-import com.example.mydebuglib.adapters.DebugAdapter
-import com.example.mydebuglib.functions.*
-import com.example.mydebuglib.listeners.OptionListener
-import com.example.mydebuglib.options.Options
+import com.example.debuglib.adapters.DebugAdapter
+import com.example.debuglib.functions.CleanLogs
+import com.example.debuglib.functions.SendLogcat
+import com.example.debuglib.functions.SendRealm
+import com.example.debuglib.functions.SendZip
+import com.example.debuglib.listeners.OptionListener
+import com.example.debuglib.options.Options
+import com.example.mydebuglib.R
 import com.willowtreeapps.hyperion.core.Hyperion
 
 
@@ -148,7 +148,7 @@ open class DebugTool  (
     @SuppressLint("InflateParams")
     fun showList(){
         view = LayoutInflater.from(context).inflate(R.layout.listview,null)
-        val builder = AlertDialog.Builder(context,R.style.AlertDialog)
+        val builder = AlertDialog.Builder(context, R.style.AlertDialog)
         builder.setTitle("DebugTool")
             .setView(view)
             .setPositiveButton("cancel",null)

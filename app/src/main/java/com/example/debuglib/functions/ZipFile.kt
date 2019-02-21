@@ -1,4 +1,4 @@
-package com.example.mydebuglib.functions
+package com.example.debuglib.functions
 
 import net.lingala.zip4j.core.ZipFile
 import net.lingala.zip4j.exception.ZipException

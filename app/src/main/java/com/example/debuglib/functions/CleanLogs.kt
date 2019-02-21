@@ -1,4 +1,4 @@
-package com.example.mydebuglib.functions
+package com.example.debuglib.functions
 
 import java.io.File
 import java.util.*

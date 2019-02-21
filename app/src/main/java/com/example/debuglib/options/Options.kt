@@ -1,4 +1,4 @@
-package com.example.mydebuglib.options
+package com.example.debuglib.options
 
 open class Options {
 

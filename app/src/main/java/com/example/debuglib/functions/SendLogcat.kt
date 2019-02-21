@@ -1,4 +1,4 @@
-package com.example.mydebuglib.functions
+package com.example.debuglib.functions
 
 import android.content.Context
 import android.content.Intent
