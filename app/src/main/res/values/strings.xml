@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">DebugLib</string>
+    <string name="add_to_debug">Add to debug</string>
+    <string name="you_need_to_initialize_debug_in_fragment">you need to initialize Debug in Fragment</string>
 </resources>

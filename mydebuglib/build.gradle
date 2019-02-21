@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 apply plugin: 'com.github.dcendents.android-maven'
 group='edmt.dev'
@@ -8,9 +9,15 @@ version='1.0'
 
 android {
     compileSdkVersion 28
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+
+    }
 
 
     defaultConfig {
+
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
@@ -22,7 +29,9 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            zipAlignEnabled true
+            shrinkResources false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -43,14 +52,23 @@ dependencies {
     implementation 'com.willowtreeapps.hyperion:hyperion-timber:0.9.27'
     implementation 'com.willowtreeapps.hyperion:hyperion-build-config:0.9.27'
 
+    implementation  'org.apache.commons:commons-lang3:3.0'
 
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //implementation of ZipFile file
+    implementation 'org.slf4j:slf4j-api:1.7.25'
 
+    // Event bus for Android and Java that simplifies communication between Activities, Fragments, Threads, Services, etc. Less code, better quality.
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:28.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //noinspection GradlePath
+    implementation files('/home/local/BROCELIA/zhli/Workspace/DebugLib/app/libs/zip4j_1.3.2.jar')
 }
 repositories {
     mavenCentral()
