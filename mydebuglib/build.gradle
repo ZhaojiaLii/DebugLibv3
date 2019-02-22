@@ -4,7 +4,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
 apply plugin: 'com.github.dcendents.android-maven'
-group='edmt.dev'
+group='com.github.ZhaojiaLii'
 version='1.0'
 
 android {

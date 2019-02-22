@@ -3,9 +3,9 @@ package com.example.mydebuglib.functions
 import java.io.File
 import java.util.*
 
-class CleanLogs {
+open class CleanLogs {
 
-    fun CheckAndCleanLog(databasePath: String?){
+    open fun CheckAndCleanLog(databasePath: String?){
         val src = databasePath!!.substring(0, databasePath.lastIndexOf("/"))    // path of destination folder
         val deletefile = File(src).listFiles()
         val filenameList = ArrayList<String>()

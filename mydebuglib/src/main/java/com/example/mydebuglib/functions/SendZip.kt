@@ -6,9 +6,9 @@ import android.net.Uri
 import android.widget.Toast
 import java.io.File
 
-class SendZip {
+open class SendZip {
 
-     fun sendZip(context:Context,databasePath:String?,ZipPassword:String?,AddressMail:String?,appName:String){
+     open fun sendZip(context:Context,databasePath:String?,ZipPassword:String?,AddressMail:String?,appName:String){
         // need to delete the original ZipFile file first and then compress the new ZipFile file
 
         val src = databasePath!!.substring(0, databasePath.lastIndexOf("/"))    // path of destination folder

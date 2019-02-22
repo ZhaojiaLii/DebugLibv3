@@ -7,9 +7,9 @@ import net.lingala.zip4j.util.Zip4jConstants
 import org.apache.commons.lang3.StringUtils
 import java.io.File
 
-class ZipFile {
+open class ZipFile {
 
-    fun zip (src: String?, dest: String?, isCreateDir: Boolean, passwd: String?): String? {
+    open fun zip (src: String?, dest: String?, isCreateDir: Boolean, passwd: String?): String? {
         val srcFile = File(src)
         val Dest = buildDestinationZipFilePath(srcFile,dest)
         val parameters = ZipParameters()

@@ -137,7 +137,7 @@ open class DebugTool  (
 
     }
 
-    fun AddOptions(option:String, listener : OptionListener){
+    open fun AddOptions(option:String, listener : OptionListener){
         adapter1.addinlist(option)
         adapter1.addListener(listener,numberIndex)
         numberIndex++
@@ -146,7 +146,7 @@ open class DebugTool  (
 
 
     @SuppressLint("InflateParams")
-    fun showList(){
+    open fun showList(){
         view = LayoutInflater.from(context).inflate(R.layout.listview,null)
         val builder = AlertDialog.Builder(context,R.style.AlertDialog)
         builder.setTitle("DebugTool")

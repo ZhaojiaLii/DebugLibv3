@@ -7,9 +7,9 @@ import android.widget.Toast
 import java.io.File
 import java.io.IOException
 
-class SendLogcat {
+open class SendLogcat {
 
-    fun SendLogcatByMail(context:Context,logcatPath: String?,AddressMail:String?,appName:String) {
+    open fun SendLogcatByMail(context:Context,logcatPath: String?,AddressMail:String?,appName:String) {
 
         val outputFile = File(logcatPath)
 

@@ -64,7 +64,7 @@ open class DebugAdapter : BaseAdapter() {
         return mList.size
     }
 
-    fun addinlist(element : String){
+    open fun addinlist(element : String){
         mList.add(element)
     }
 

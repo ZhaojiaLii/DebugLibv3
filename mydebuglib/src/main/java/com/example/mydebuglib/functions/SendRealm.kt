@@ -6,9 +6,9 @@ import android.net.Uri
 import android.widget.Toast
 import java.io.File
 
-class SendRealm {
+open class SendRealm {
 
-    fun SendDatabaseByMail(context:Context,databasePath: String?,AddressMail:String?,appName:String){
+    open fun SendDatabaseByMail(context:Context,databasePath: String?,AddressMail:String?,appName:String){
 
         val f = File(databasePath)
 
